@@ -1,0 +1,5 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+8,nano-frontend,static,,Yes,
+9,nano-frontend,worktray,,No,"Possui 35 ficheiros e ~1.7k linhas de código, expõe um fragmento e consome fragmentos de outro MFE, indicando responsabilidade de domínio (worktray) em vez de mero componente de UI."
+10,global-state-communication,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",,Yes,
+11,hammering-apis,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",/oauth2/token,Yes,

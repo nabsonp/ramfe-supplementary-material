@@ -1,0 +1,6 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+2,global-state-communication,"auth, dashboard, navigation-drawer, root-config, statement, transactions",,Yes,
+3,hammering-apis,"dashboard, statement",/account/{param}/statement,Yes,
+4,nano-frontend,auth,,No,"Embora tenha apenas uma tela, está alinhado a um domínio completo (autenticação, com login, registro e gerenciamento de tokens), não sendo um mero componente de interface separado como se fosse MFE."
+5,nano-frontend,navigation-drawer,,Yes,
+6,one-for-all,"navigation-drawer, auth, dashboard, statement, transactions",,No,"Não há composições entre MFEs (compositions.json vazio); nenhum MFE é importado por todos os outros, e a comunicação por eventos (CustomEvent) não configura a dependência por importação que a definição exige."

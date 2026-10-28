@@ -1,0 +1,6 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+2,global-state-communication,"auth, dashboard, navigation-drawer, root-config, statement, transactions",,Yes,
+3,hammering-apis,"dashboard, statement",/account/{param}/statement,Yes,
+4,nano-frontend,auth,,No,"Auth MFE tem 20 arquivos e 995 linhas de código, implementa um domínio completo de autenticação (login, registro, gerenciamento de token), não sendo apenas um componente de UI."
+5,nano-frontend,navigation-drawer,,No,"Navigation-drawer tem 20 arquivos e 968 linhas de código, gerencia navegação e seleção de conta, comunicando-se via eventos, não sendo apenas um componente de UI."
+6,one-for-all,"navigation-drawer, auth, dashboard, statement, transactions",,No,"Nenhum MFE é importado por todos os outros; a composição é feita pelo shell (root-config) e a comunicação ocorre via eventos, não por importação direta."

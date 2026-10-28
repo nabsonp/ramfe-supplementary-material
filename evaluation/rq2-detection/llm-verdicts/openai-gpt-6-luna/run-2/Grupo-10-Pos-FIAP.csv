@@ -1,0 +1,6 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+2,global-state-communication,"auth, dashboard, navigation-drawer, root-config, statement, transactions",,Yes,
+3,hammering-apis,"dashboard, statement",/account/{param}/statement,Yes,
+4,nano-frontend,auth,,No,"O MFE reúne a tela de login e operações de autenticação e criação de usuário, formando uma responsabilidade coerente, não apenas um componente de interface."
+5,nano-frontend,navigation-drawer,,Yes,
+6,one-for-all,"navigation-drawer, auth, dashboard, statement, transactions",,No,"Não há composição/importação entre os MFEs; o shell os monta separadamente, e as interações descritas ocorrem por navegação e eventos."

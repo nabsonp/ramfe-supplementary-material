@@ -1,0 +1,6 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+2,global-state-communication,"auth, dashboard, navigation-drawer, root-config, statement, transactions",,Yes,
+3,hammering-apis,"dashboard, statement",/account/{param}/statement,Yes,
+4,nano-frontend,auth,,I don't know,"O MFE tem uma única tela de login, mas os fatos não mostram se ela é apenas um componente separado indevidamente ou se representa a responsabilidade completa de autenticação."
+5,nano-frontend,navigation-drawer,,Yes,
+6,one-for-all,"navigation-drawer, auth, dashboard, statement, transactions",,No,Não há evidência de um MFE importado pelos demais: as composições estão vazias e o shell monta cada MFE separadamente.

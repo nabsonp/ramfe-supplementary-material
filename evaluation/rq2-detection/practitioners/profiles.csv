@@ -1,0 +1,4 @@
+practitioner,role,years_with_mfes,technologies,largest_architecture,anti_patterns_seen_in_practice
+C1,Developer,4,In-house implementation of the company,About 40 MFEs,Cyclic Dependency; Hub-like Dependency; One Micro Frontend for All; Hammering APIs; Global State Communication; Mega Frontend; Nano Frontend
+C2,Mid-level front-end developer,2,Module Federation,12 MFEs,Hub-like Dependency; Hammering APIs; Global State Communication; Mega Frontend
+C3,Software engineer,6,"Module Federation, Module Federation with Web Components, Web Components, iFrame",About 200 MFEs (in contact with about 10% of them),Cyclic Dependency; Hub-like Dependency; One Micro Frontend for All; Hammering APIs; Global State Communication; Mega Frontend; Nano Frontend

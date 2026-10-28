@@ -1,0 +1,2 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+1,nano-frontend,dischargeSummary,,I don't know,"O MFE expõe apenas um fragmento (DischargeSummary) e tem 8 arquivos, mas não há informação sobre o domínio que cobre nem se essa divisão resulta em uma decomposição fragmentada e ineficaz."

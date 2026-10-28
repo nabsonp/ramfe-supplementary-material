@@ -1,0 +1,2 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+7,nano-frontend,mf-user,,No,"O MFE @snapify/mf-user possui uma única tela (/profile) e nenhum fragmento, mas representa um domínio coeso (perfil do usuário) com rota própria, entrypoint e ciclos de vida independentes; não há indícios de que seja um componente de UI mal decomposto."

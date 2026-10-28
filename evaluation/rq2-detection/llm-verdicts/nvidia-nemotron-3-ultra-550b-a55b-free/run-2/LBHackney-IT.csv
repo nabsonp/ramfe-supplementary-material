@@ -1,0 +1,5 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+8,nano-frontend,static,,Yes,
+9,nano-frontend,worktray,,Yes,
+10,global-state-communication,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",,Yes,
+11,hammering-apis,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",/oauth2/token,I don't know,"Todos os MFEs chamam o endpoint de autenticação, mas não há evidência de que estejam ativos simultaneamente nem de que as chamadas sejam duplicadas de forma prejudicial; o token é uma preocupação transversal que pode ser legítima em cada MFE."

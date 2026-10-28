@@ -1,0 +1,6 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+2,global-state-communication,"auth, dashboard, navigation-drawer, root-config, statement, transactions",,Yes,
+3,hammering-apis,"dashboard, statement",/account/{param}/statement,Yes,
+4,nano-frontend,auth,,No,"Embora exponha uma única tela Login, auth corresponde a uma capacidade de autenticação, não apenas a um componente de interface; os fatos não indicam fragmentação da arquitetura."
+5,nano-frontend,navigation-drawer,,Yes,
+6,one-for-all,"navigation-drawer, auth, dashboard, statement, transactions",,No,compositions.json está vazio: não há evidência de um MFE importado pelos demais. O shell monta os MFEs separadamente.

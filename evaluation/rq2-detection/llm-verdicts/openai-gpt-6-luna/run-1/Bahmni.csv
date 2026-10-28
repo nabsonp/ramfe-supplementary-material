@@ -1,0 +1,2 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+1,nano-frontend,dischargeSummary,,I don't know,"O MFE expõe um fragmento e tem 8 arquivos, mas esses fatos não mostram se ele representa uma decomposição fragmentada de uma capacidade maior ou uma unidade coerente do domínio de resumo de alta."

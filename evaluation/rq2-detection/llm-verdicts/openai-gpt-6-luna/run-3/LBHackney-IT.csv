@@ -1,0 +1,5 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+8,nano-frontend,static,,I don't know,"Há uma tela alcançável e o MFE tem 9 arquivos, mas esses fatos não mostram que ele seja uma decomposição fragmentada e ineficaz, em vez de uma unidade de responsabilidade adequada."
+9,nano-frontend,worktray,,I don't know,"Há uma tela alcançável, mas isso não basta para saber se o MFE representa apenas um fragmento de interface ou toda uma responsabilidade de domínio; os artefatos não esclarecem esse limite."
+10,global-state-communication,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",,Yes,
+11,hammering-apis,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",/oauth2/token,Yes,

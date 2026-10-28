@@ -1,0 +1,5 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+8,nano-frontend,static,,I don't know,"Há uma única tela estática e o MFE é pequeno (9 arquivos; 109 linhas de código), mas os dados não mostram se essa separação é uma decomposição fragmentada e ineficaz ou uma responsabilidade autônoma."
+9,nano-frontend,worktray,,No,"Há uma única tela, mas ela é explicitamente WorktrayView e o MFE também contém WorktraySimpleList; os fatos não indicam que seja só um componente de UI nem uma decomposição fragmentada."
+10,global-state-communication,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",,Yes,
+11,hammering-apis,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",/oauth2/token,Yes,

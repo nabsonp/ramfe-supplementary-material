@@ -1,0 +1,2 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+7,nano-frontend,mf-user,,I don't know,"O MFE tem uma única tela e é pequeno (6 arquivos, 121 linhas de código), mas esses fatos não mostram se ele foi separado como um componente ou se representa uma unidade coesa do domínio de perfil."

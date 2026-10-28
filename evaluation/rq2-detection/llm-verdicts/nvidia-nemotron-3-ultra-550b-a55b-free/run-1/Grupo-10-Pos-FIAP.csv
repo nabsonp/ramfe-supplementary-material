@@ -1,0 +1,6 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+2,global-state-communication,"auth, dashboard, navigation-drawer, root-config, statement, transactions",,Yes,
+3,hammering-apis,"dashboard, statement",/account/{param}/statement,Yes,
+4,nano-frontend,auth,,No,"O MFE auth implementa o domínio de autenticação completo (login, registro) com 20 arquivos e 995 linhas de código, não sendo apenas um componente de UI."
+5,nano-frontend,navigation-drawer,,Yes,
+6,one-for-all,"navigation-drawer, auth, dashboard, statement, transactions",,No,"Não há um único MFE importado por todos os outros; o shell monta os MFEs, mas eles não se importam mutuamente."

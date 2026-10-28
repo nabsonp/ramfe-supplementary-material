@@ -1,0 +1,22 @@
+Repository mining and automated screening
+==========================================================
+collected at              2026-09-24T00:33:35-04:00
+search string             "micro frontend" OR microfrontend OR "micro frontends" OR "micro-frontend"
+creation window           2008-01-01 .. 2026-09-24
+ordering                  sort:stars
+API requests              4753
+
+distinct repositories     20099
+excluded by layer 1       2684        (EC4 fork, EC3 template, EC1 empty or no code)
+excluded by layer 2       2249        (EC2/EC3 example, POC or boilerplate terms)
+excluded by layer 3       13036        (EC5 abandoned on creation)
+excluded by layer 4       223        (EC6 no mass of code)
+left for manual review    1907
+
+owners listed             1714
+sibling repositories      12801        (in siblings.csv, to be grouped by hand)
+
+Criterion IC2 (a system with two or more micro frontends) is
+not decided here — it is a judgement call, and the
+corresponding column in screened.csv is left blank to be
+filled in by the raters.

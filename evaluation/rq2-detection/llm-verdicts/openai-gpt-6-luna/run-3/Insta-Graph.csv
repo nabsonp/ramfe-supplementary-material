@@ -1,0 +1,2 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+7,nano-frontend,mf-user,,I don't know,"O MFE tem uma tela alcançável (/profile) e 6 arquivos, mas esses dados não mostram se ela é uma parte fragmentada de um domínio maior ou a experiência completa de um domínio coerente."

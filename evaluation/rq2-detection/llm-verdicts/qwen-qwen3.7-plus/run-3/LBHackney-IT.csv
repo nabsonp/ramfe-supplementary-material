@@ -1,0 +1,5 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+8,nano-frontend,static,,Yes,
+9,nano-frontend,worktray,,No,"Apesar de ter uma única tela, possui 35 arquivos e mais de 1500 linhas de código, caracterizando um domínio coeso e não a confusão com um simples componente de UI."
+10,global-state-communication,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",,Yes,
+11,hammering-apis,"mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",/oauth2/token,No,"A chamada é a um endpoint de autenticação (/oauth2/token) via biblioteca comum, onde cada MFE obtém seu próprio token, não configurando requisições duplicadas de dados de domínio que causem carga indevida."

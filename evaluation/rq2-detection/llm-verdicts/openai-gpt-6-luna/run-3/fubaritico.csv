@@ -1,0 +1,3 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+13,nano-frontend,home,,No,"Reúne a experiência de home, com as telas RootLayout e Home; os fatos não indicam que seja apenas um componente de UI separado artificialmente."
+14,nano-frontend,photos,,Yes,

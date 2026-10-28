@@ -1,0 +1,3 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+13,nano-frontend,home,,No,"Representa uma página completa (landing page) com volume de código expressivo (889 linhas), não se confundindo com um simples componente de UI."
+14,nano-frontend,photos,,No,"Corresponde a um domínio/página distinto (galeria de fotos) com código suficiente (501 linhas) para justificar a separação, não sendo um mero componente."

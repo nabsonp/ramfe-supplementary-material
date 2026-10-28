@@ -1,0 +1,2 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+7,nano-frontend,mf-user,,No,"O MFE @snapify/mf-user representa um domínio de negócio distinto (Perfil de Usuário) com rota própria (/profile), ciclo de vida independente e responsabilidade coesa, não sendo um componente de UI fragmentado de um domínio maior."

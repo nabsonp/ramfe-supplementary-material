@@ -1,0 +1,6 @@
+row,anti_pattern,micro_frontends,endpoint,judgment,justification_pt
+23,hammering-apis,"micro-frontends-onboarding-app, micro-frontends-profile-app",/members/lookup/countries,Yes,
+24,hammering-apis,"micro-frontends-onboarding-app, micro-frontends-profile-app",/members/{param},Yes,
+25,hammering-apis,"micro-frontends-onboarding-app, micro-frontends-profile-app",/members/{param}/skills,Yes,
+26,nano-frontend,micro-frontends-forums-app,,Yes,
+27,nano-frontend,micro-frontends-profile-app,,No,"O MFE tem 3 telas (Profile, ProfileStats, NotFoundPage) coesas no domínio de perfil de usuário, tamanho médio (56 arquivos, 3.3k linhas de código); não é uma decomposição fragmentada em nível de componente."

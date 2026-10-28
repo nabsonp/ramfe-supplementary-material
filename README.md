@@ -1,0 +1,51 @@
+# Supplementary material — RAMFE: A Framework for Reconstruction and Analysis of Micro Frontend Architectures
+
+This repository holds the data, prompts, judge records, and scripts behind the paper. `scripts/compute_results.py` recomputes every number the paper reports from the files below (Python 3.10+, standard library only):
+
+```bash
+python3 scripts/compute_results.py
+```
+
+## Map
+
+| folder | what it holds | paper |
+|---|---|---|
+| `mfad/` | link to the source code of MFAD and the list of what it supports (`SUPPORTED.md`) | Section IV |
+| `mining/` | the mining script, protocol, run record, every repository returned with the criterion that excluded it, and the manual decisions on the 31 candidate organizations | Sections V-A, VI-A |
+| `systems/<system>/` | the reconstructed architecture of each of the nine evaluated systems (one JSON file per collection, `manifest.json` with the commit of every repository read), its `detections.json`, and the HTML report | Sections IV, VI |
+| `evaluation/reconstruction-2026-10-10/` | the reconstruction the agents (RQ1 precision) and the LLM judges (RQ2) received | Sections V-B, V-C |
+| `evaluation/reconstruction-2026-10-15/` | the reconstruction used in both recall tasks, after the corrections from the RQ1 precision evaluation | Sections V-B, V-C |
+| `evaluation/rq1-reconstruction/` | agent-as-a-judge: prompts, the precision sample with every verdict, every session, the recall sample, and the verified omissions | Sections V-B, VI-B |
+| `evaluation/rq2-detection/` | LLM-as-a-judge: prompts, the evaluated detections with every verdict, every call, the recall calls, and the verified omissions; the practitioners' guide, profiles, and answers | Sections V-C, VI-C |
+| `scripts/` | `compute_results.py` | Section VI |
+
+## Versions of the reconstruction
+
+The evaluation used three successive outputs of MFAD on the same code. Each folder holds exactly what the corresponding judges saw.
+
+| date | used by | MFAD |
+|---|---|---|
+| 2026-10-10 | RQ1 precision (agents) and RQ2 (LLM judges) | before the corrections |
+| 2026-10-15 | RQ1 and RQ2 recall | after the corrections derived from the false positives of the RQ1 precision evaluation |
+| 2026-10-16 (`systems/`) | practitioners; the current output of MFAD | after the corrections derived from the false negatives of the RQ1 recall evaluation |
+
+The corrections did not change the detections the LLM judges had evaluated, but added seven: Hammering APIs (`/oauth2/token`) and Global State Communication (`features`) in LBHackney-IT, and five Hammering APIs paths in udistrital (116 to 121). The LLM judges evaluated the two LBHackney-IT detections in a separate round, with the same prompts and parameters and the reconstruction of 2026-10-16 (`source` column of `detections-and-llm-verdicts.csv`); the five udistrital paths belong to a single practitioner row that all evaluators confirmed. Hence the counts:
+
+| set | detections | Hammering APIs |
+|---|---|---|
+| evaluated by the LLM judges (`evaluation/rq2-detection/evaluated-set/`) | 159 | 121 |
+| current output of MFAD (`systems/*/detections.json`) | 164 | 126 |
+| rows evaluated by the practitioners (Hammering APIs grouped per system) | 42 | 4 |
+
+## Samples
+
+- **RQ1 precision.** The sample was drawn per element type with Cochran's formula (95% confidence, p = 0.5, 10% margin of error per type), allocated across systems in proportion to their elements, with at least one element per system. It was drawn from twelve reconstructed systems, 420 elements, before we removed three systems that are not part of the study (two validation systems and one system that did not come from the organization step of the mining). The 361 elements of the nine evaluated systems are flagged `in_evaluated_systems = True` in `evaluation/rq1-reconstruction/precision/sample-and-verdicts.csv`; their margin of error per type is between 9.9% and 13.8%.
+- **RQ1 recall.** One MFE per evaluated system and ten more from udistrital, the largest system: 19 MFEs (`evaluation/rq1-reconstruction/recall/sampled-mfes.csv`).
+
+## Language and anonymization
+
+- The prompts were written and sent in Portuguese, with the catalog definitions verbatim in English. Each prompt is given as sent (`*.pt.md`) and in an English translation (`*.en.md`). The session and call records, the judges' justifications, and the practitioners' justifications are kept verbatim; the CSV headers and categorical values are in English.
+- The practitioners are identified as C1, C2, and C3, as in the paper.
+- MFAD had another name during part of the study; it was replaced by MFAD in every file.
+- Repositories owned by the authors that the mining search returned are listed with the owner `anonymized-author`.
+- Local paths were removed from the records.
