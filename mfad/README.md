@@ -2,7 +2,7 @@
 
 MFAD (Micro Frontends Anti-patterns Detector) is the open-source implementation of RAMFE evaluated in the paper.
 
-- **Source code:** https://anonymous.4open.science/r/TODO (anonymized for review); the evaluation used release 1.0.0
+- **Source code:** https://anonymous.4open.science/r/mfad-2726/ (anonymized for review); the evaluation used release 1.0.0
 - **What it supports and does not support yet:** [SUPPORTED.md](SUPPORTED.md)
 
 Usage:
