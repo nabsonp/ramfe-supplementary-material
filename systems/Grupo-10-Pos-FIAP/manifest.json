@@ -1,7 +1,7 @@
 {
   "mfad": "3.3.0",
-  "tool_version": "0.1.0",
-  "generated_at": "2026-10-16T21:31:54Z",
+  "tool_version": "1.0.0",
+  "generated_at": "2026-10-28T16:30:00Z",
   "project": "Grupo-10-Pos-FIAP",
   "reconstructor": "single-spa",
   "sources": [

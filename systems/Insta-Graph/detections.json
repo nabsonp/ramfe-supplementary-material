@@ -1,9 +1,9 @@
 [
   {
     "anti_pattern": "nano-frontend",
-    "message": "micro-frontend-user tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 121 linhas de código, abaixo da mediana de 132.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "micro-frontend-user has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 121 lines of code, below the median of 132.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "micro-frontend-user"
     ],
@@ -88,16 +88,16 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 121,
-      "piso": 5,
-      "mediana_telas": 1,
-      "mediana_fragmentos": 0,
-      "mediana_linhas": 132,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 121,
+      "floor": 5,
+      "median_screens": 1,
+      "median_fragments": 0,
+      "median_lines": 132,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   }

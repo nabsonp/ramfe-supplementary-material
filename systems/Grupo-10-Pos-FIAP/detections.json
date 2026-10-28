@@ -1,9 +1,9 @@
 [
   {
     "anti_pattern": "global-state-communication",
-    "message": "6 micro frontends compartilham 3 fatias do estado global: cortex-bank-auth, cortex-bank-dashboard, cortex-bank-navigation-drawer, cortex-bank-root-config, cortex-bank-statement, cortex-bank-transactions",
-    "dimension": "estado global",
-    "explanation": "Mais de um micro frontend acessa a mesma fatia do estado global. O formato desse dado virou interface pública de fato, sem nunca ter sido declarado como tal.",
+    "message": "6 micro frontends share 3 slices of global state: cortex-bank-auth, cortex-bank-dashboard, cortex-bank-navigation-drawer, cortex-bank-root-config, cortex-bank-statement, cortex-bank-transactions",
+    "dimension": "global state",
+    "explanation": "More than one micro frontend accesses the same slice of global state. The shape of that data has become a de facto public interface without ever being declared as one.",
     "subjects": [
       "cortex-bank-auth",
       "cortex-bank-dashboard",
@@ -304,9 +304,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /account/{param}/statement é chamada por 2 micro frontends: cortex-bank-dashboard, cortex-bank-statement",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /account/{param}/statement is called by 2 micro frontends: cortex-bank-dashboard, cortex-bank-statement",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "cortex-bank-dashboard",
       "cortex-bank-statement"
@@ -382,9 +382,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "cortex-bank-auth tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 995 linhas de código, abaixo da mediana de 1389.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "cortex-bank-auth has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 995 lines of code, below the median of 1389.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "cortex-bank-auth"
     ],
@@ -469,24 +469,24 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 995,
-      "piso": 5,
-      "mediana_telas": 1,
-      "mediana_fragmentos": 0,
-      "mediana_linhas": 1389,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 995,
+      "floor": 5,
+      "median_screens": 1,
+      "median_fragments": 0,
+      "median_lines": 1389,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "cortex-bank-navigation-drawer tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 968 linhas de código, abaixo da mediana de 1389.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "cortex-bank-navigation-drawer has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 968 lines of code, below the median of 1389.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "cortex-bank-navigation-drawer"
     ],
@@ -571,24 +571,24 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 968,
-      "piso": 5,
-      "mediana_telas": 1,
-      "mediana_fragmentos": 0,
-      "mediana_linhas": 1389,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 968,
+      "floor": 5,
+      "median_screens": 1,
+      "median_fragments": 0,
+      "median_lines": 1389,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   },
   {
     "anti_pattern": "one-for-all",
-    "message": "cortex-bank-navigation-drawer está conectado a 4 dos 4 demais micro frontends: depende de 4 e é dependido por 0.",
-    "dimension": "todas as relações",
-    "explanation": "O micro frontend está ligado a quase todos os demais, somadas as três relações. Deixa de ser uma parte implantável de forma independente.",
+    "message": "cortex-bank-navigation-drawer is connected to 4 of the other 4 micro frontends: it depends on 4 and is depended on by 0.",
+    "dimension": "all relations",
+    "explanation": "The micro frontend is connected to almost all the others, adding up the three relations. It is no longer an independently deployable part.",
     "subjects": [
       "cortex-bank-navigation-drawer",
       "cortex-bank-auth",

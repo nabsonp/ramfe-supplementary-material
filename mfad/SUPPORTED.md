@@ -37,8 +37,8 @@ Imports are resolved through relative paths and `tsconfig`/`jsconfig` `paths` an
 | One Micro Frontend for All | connected to at least 90% of the other MFEs, in systems with five or more MFEs, excluding the shell and undirected edges |
 | Hammering APIs | two or more MFEs call the same path |
 | Global State Communication | two or more MFEs access the same state slice |
-| Mega Frontend | screens and lines of code at or above Q3 + 1.5·IQR, in systems with at least eight MFEs |
-| Nano Frontend | screens plus fragments at most five or at or below Q1 − 1.5·IQR, and lines of code below the median |
+| Mega Frontend | screens and lines of code above Q3 + 1.5·IQR, in systems with at least eight MFEs |
+| Nano Frontend | screens plus fragments at most five or below Q1 − 1.5·IQR, and lines of code below the median |
 
 Each detection lists the MFEs involved, the source locations, the relationship that produced it, the values that support it, and a link to the catalog definition.
 

@@ -1,9 +1,9 @@
 [
   {
     "anti_pattern": "global-state-communication",
-    "message": "5 micro frontends compartilham 4 fatias do estado global: mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",
-    "dimension": "estado global",
-    "explanation": "Mais de um micro frontend acessa a mesma fatia do estado global. O formato desse dado virou interface pública de fato, sem nunca ter sido declarado como tal.",
+    "message": "5 micro frontends share 4 slices of global state: mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",
+    "dimension": "global state",
+    "explanation": "More than one micro frontend accesses the same slice of global state. The shape of that data has become a de facto public interface without ever being declared as one.",
     "subjects": [
       "mtfh-frontend-activity-history",
       "mtfh-frontend-processes",
@@ -213,9 +213,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /oauth2/token é chamada por 5 micro frontends: mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /oauth2/token is called by 5 micro frontends: mtfh-frontend-activity-history, mtfh-frontend-processes, mtfh-frontend-property, mtfh-frontend-static, mtfh-frontend-worktray",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "mtfh-frontend-activity-history",
       "mtfh-frontend-processes",
@@ -384,9 +384,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "mtfh-frontend-static tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 109 linhas de código, abaixo da mediana de 3011.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "mtfh-frontend-static has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 109 lines of code, below the median of 3011.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "mtfh-frontend-static"
     ],
@@ -471,24 +471,24 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 109,
-      "piso": 5,
-      "mediana_telas": 2,
-      "mediana_fragmentos": 0,
-      "mediana_linhas": 3011,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 109,
+      "floor": 5,
+      "median_screens": 2,
+      "median_fragments": 0,
+      "median_lines": 3011,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "mtfh-frontend-worktray tem 1 telas e 1 fragmentos, somando 2, no máximo 5 (piso absoluto), com 1553 linhas de código, abaixo da mediana de 3011.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "mtfh-frontend-worktray has 1 screens and 1 fragments, 2 in total, at most 5 (absolute floor), with 1553 lines of code, below the median of 3011.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "mtfh-frontend-worktray"
     ],
@@ -573,16 +573,16 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 1,
-      "linhas": 1553,
-      "piso": 5,
-      "mediana_telas": 2,
-      "mediana_fragmentos": 0,
-      "mediana_linhas": 3011,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 1,
+      "lines": 1553,
+      "floor": 5,
+      "median_screens": 2,
+      "median_fragments": 0,
+      "median_lines": 3011,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   }

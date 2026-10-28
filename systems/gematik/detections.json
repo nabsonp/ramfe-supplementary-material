@@ -1,9 +1,9 @@
 [
   {
     "anti_pattern": "nano-frontend",
-    "message": "DEMIS-portal-bedoccupancy tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 2608 linhas de código, abaixo da mediana de 5083.5.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "DEMIS-portal-bedoccupancy has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 2608 lines of code, below the median of 5083.5.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "DEMIS-portal-bedoccupancy"
     ],
@@ -88,24 +88,24 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 2608,
-      "piso": 5,
-      "mediana_telas": 1.5,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 5083.5,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 2608,
+      "floor": 5,
+      "median_screens": 1.5,
+      "median_fragments": 0.0,
+      "median_lines": 5083.5,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "DEMIS-portal-igs tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 2183 linhas de código, abaixo da mediana de 5083.5.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "DEMIS-portal-igs has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 2183 lines of code, below the median of 5083.5.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "DEMIS-portal-igs"
     ],
@@ -190,16 +190,16 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 2183,
-      "piso": 5,
-      "mediana_telas": 1.5,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 5083.5,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 2183,
+      "floor": 5,
+      "median_screens": 1.5,
+      "median_fragments": 0.0,
+      "median_lines": 5083.5,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   }

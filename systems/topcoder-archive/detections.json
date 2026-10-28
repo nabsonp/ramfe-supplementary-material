@@ -1,9 +1,9 @@
 [
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /members/lookup/countries é chamada por 2 micro frontends: micro-frontends-onboarding-app, micro-frontends-profile-app",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /members/lookup/countries is called by 2 micro frontends: micro-frontends-onboarding-app, micro-frontends-profile-app",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "micro-frontends-onboarding-app",
       "micro-frontends-profile-app"
@@ -79,9 +79,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /members/{param} é chamada por 2 micro frontends: micro-frontends-onboarding-app, micro-frontends-profile-app",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /members/{param} is called by 2 micro frontends: micro-frontends-onboarding-app, micro-frontends-profile-app",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "micro-frontends-onboarding-app",
       "micro-frontends-profile-app"
@@ -163,9 +163,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /members/{param}/skills é chamada por 2 micro frontends: micro-frontends-onboarding-app, micro-frontends-profile-app",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /members/{param}/skills is called by 2 micro frontends: micro-frontends-onboarding-app, micro-frontends-profile-app",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "micro-frontends-onboarding-app",
       "micro-frontends-profile-app"
@@ -247,9 +247,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "micro-frontends-forums-app tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 543 linhas de código, abaixo da mediana de 4126.5.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "micro-frontends-forums-app has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 543 lines of code, below the median of 4126.5.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "micro-frontends-forums-app"
     ],
@@ -334,24 +334,24 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 543,
-      "piso": 5,
-      "mediana_telas": 2.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 4126.5,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 543,
+      "floor": 5,
+      "median_screens": 2.0,
+      "median_fragments": 0.0,
+      "median_lines": 4126.5,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "micro-frontends-profile-app tem 3 telas e 0 fragmentos, somando 3, no máximo 5 (piso absoluto), com 3335 linhas de código, abaixo da mediana de 4126.5.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "micro-frontends-profile-app has 3 screens and 0 fragments, 3 in total, at most 5 (absolute floor), with 3335 lines of code, below the median of 4126.5.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "micro-frontends-profile-app"
     ],
@@ -436,16 +436,16 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 3,
-      "fragmentos": 0,
-      "linhas": 3335,
-      "piso": 5,
-      "mediana_telas": 2.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 4126.5,
-      "distribuicao": "sem amostra suficiente"
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 3,
+      "fragments": 0,
+      "lines": 3335,
+      "floor": 5,
+      "median_screens": 2.0,
+      "median_fragments": 0.0,
+      "median_lines": 4126.5,
+      "distribution": "insufficient sample"
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Nano%20Frontend"
   }

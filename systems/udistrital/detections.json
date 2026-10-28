@@ -1,9 +1,9 @@
 [
   {
     "anti_pattern": "global-state-communication",
-    "message": "44 micro frontends compartilham 24 fatias do estado global: acta_inicio_mf, auditoria_mf, core_mf_cliente, diplomas_mf, ejecucion_auditoria_mf, espacios_fisicos_dependencias_mf, formularios_dinamicos_mf, gestion_contractual_mf, gestion_registro_dependencias_mf, mapeo_dependencias_mf, plan_anual_auditoria_mf, plan_docente_mf, planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf, poliza_mf, reportes_mf, revision_cumplidos_proveedores_mf, seguimiento_comisiones_estudio_mf, seguimiento_sabaticos_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_gestion_periodo_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_paz_y_salvos_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_preinscripciones_mf, sga_cliente_proyecto_curricular_mf, solicitudes_comisiones_estudio_mf, solicitudes_sabaticos_mf, tirilla_noticias_mf, usuario_rol_mf",
-    "dimension": "estado global",
-    "explanation": "Mais de um micro frontend acessa a mesma fatia do estado global. O formato desse dado virou interface pública de fato, sem nunca ter sido declarado como tal.",
+    "message": "44 micro frontends share 24 slices of global state: acta_inicio_mf, auditoria_mf, core_mf_cliente, diplomas_mf, ejecucion_auditoria_mf, espacios_fisicos_dependencias_mf, formularios_dinamicos_mf, gestion_contractual_mf, gestion_registro_dependencias_mf, mapeo_dependencias_mf, plan_anual_auditoria_mf, plan_docente_mf, planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf, poliza_mf, reportes_mf, revision_cumplidos_proveedores_mf, seguimiento_comisiones_estudio_mf, seguimiento_sabaticos_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_gestion_periodo_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_paz_y_salvos_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_preinscripciones_mf, sga_cliente_proyecto_curricular_mf, solicitudes_comisiones_estudio_mf, solicitudes_sabaticos_mf, tirilla_noticias_mf, usuario_rol_mf",
+    "dimension": "global state",
+    "explanation": "More than one micro frontend accesses the same slice of global state. The shape of that data has become a de facto public interface without ever being declared as one.",
     "subjects": [
       "acta_inicio_mf",
       "auditoria_mf",
@@ -10777,9 +10777,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /academico/descuento/detalle é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /academico/descuento/detalle is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -10865,9 +10865,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /academico/formacion é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /academico/formacion is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -10975,9 +10975,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /academico/produccion/tercero/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /academico/produccion/tercero/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -11063,9 +11063,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /acta_inicio é chamada por 2 micro frontends: acta_inicio_mf, gestion_contractual_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /acta_inicio is called by 2 micro frontends: acta_inicio_mf, gestion_contractual_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "acta_inicio_mf",
       "gestion_contractual_mf"
@@ -11141,9 +11141,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /actividad é chamada por 2 micro frontends: plan_anual_auditoria_mf, plan_docente_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /actividad is called by 2 micro frontends: plan_anual_auditoria_mf, plan_docente_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_anual_auditoria_mf",
       "plan_docente_mf"
@@ -11235,9 +11235,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /admision/dependencia_vinculacion_tercero/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /admision/dependencia_vinculacion_tercero/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_calendario_academico_mf"
@@ -11383,9 +11383,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /amparos-contratos/{param} é chamada por 2 micro frontends: gestion_contractual_mf, poliza_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /amparos-contratos/{param} is called by 2 micro frontends: gestion_contractual_mf, poliza_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_contractual_mf",
       "poliza_mf"
@@ -11461,9 +11461,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /arbol/{param} é chamada por 3 micro frontends: planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /arbol/{param} is called by 3 micro frontends: planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_construccion_mf",
       "planeacion_formulacion_mf",
@@ -11567,9 +11567,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /auditoria é chamada por 2 micro frontends: ejecucion_auditoria_mf, plan_anual_auditoria_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /auditoria is called by 2 micro frontends: ejecucion_auditoria_mf, plan_anual_auditoria_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "ejecucion_auditoria_mf",
       "plan_anual_auditoria_mf"
@@ -11660,9 +11660,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /calendario é chamada por 3 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /calendario is called by 3 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_calendario_academico_mf",
@@ -11767,9 +11767,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /calendario-academico é chamada por 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_calendario_academico_mf, sga_cliente_notas_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /calendario-academico is called by 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_calendario_academico_mf, sga_cliente_notas_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_calendario_academico_mf",
@@ -11873,9 +11873,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /calendario-academico/v2/{param} é chamada por 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /calendario-academico/v2/{param} is called by 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -11989,9 +11989,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /calendario-proyecto/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /calendario-proyecto/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_calendario_academico_mf"
@@ -12072,9 +12072,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /calendario/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /calendario/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_calendario_academico_mf"
@@ -12160,9 +12160,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /calendario_evento é chamada por 3 micro frontends: sga_cliente_calendario_academico_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /calendario_evento is called by 3 micro frontends: sga_cliente_calendario_academico_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_calendario_academico_mf",
       "sga_cliente_inscripcion_mf",
@@ -12262,9 +12262,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /calendario_evento/{param} é chamada por 2 micro frontends: sga_cliente_calendario_academico_mf, sga_cliente_notas_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /calendario_evento/{param} is called by 2 micro frontends: sga_cliente_calendario_academico_mf, sga_cliente_notas_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_calendario_academico_mf",
       "sga_cliente_notas_mf"
@@ -12345,9 +12345,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /campo é chamada por 2 micro frontends: espacios_fisicos_dependencias_mf, sga_cliente_evaluacion_docente_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /campo is called by 2 micro frontends: espacios_fisicos_dependencias_mf, sga_cliente_evaluacion_docente_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "espacios_fisicos_dependencias_mf",
       "sga_cliente_evaluacion_docente_mf"
@@ -12465,9 +12465,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /cargue-masivo/{param} é chamada por 2 micro frontends: ejecucion_auditoria_mf, plan_anual_auditoria_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /cargue-masivo/{param} is called by 2 micro frontends: ejecucion_auditoria_mf, plan_anual_auditoria_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "ejecucion_auditoria_mf",
       "plan_anual_auditoria_mf"
@@ -12543,9 +12543,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /colocacion-espacio-academico/{param}/{param} é chamada por 2 micro frontends: plan_docente_mf, sga_cliente_gestion_horarios_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /colocacion-espacio-academico/{param}/{param} is called by 2 micro frontends: plan_docente_mf, sga_cliente_gestion_horarios_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "sga_cliente_gestion_horarios_mf"
@@ -12621,9 +12621,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /conocimiento_idioma é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /conocimiento_idioma is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -12736,9 +12736,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /consulta_datos_docente_planta/{param} é chamada por 3 micro frontends: seguimiento_sabaticos_mf, solicitudes_comisiones_estudio_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /consulta_datos_docente_planta/{param} is called by 3 micro frontends: seguimiento_sabaticos_mf, solicitudes_comisiones_estudio_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "seguimiento_sabaticos_mf",
       "solicitudes_comisiones_estudio_mf",
@@ -12842,9 +12842,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /contratos-generales/vigencia/{param} é chamada por 2 micro frontends: gestion_contractual_mf, poliza_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /contratos-generales/vigencia/{param} is called by 2 micro frontends: gestion_contractual_mf, poliza_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_contractual_mf",
       "poliza_mf"
@@ -12920,9 +12920,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /datos_identificacion é chamada por 22 micro frontends: acta_inicio_mf, core_mf_cliente, gestion_contractual_mf, plan_docente_mf, planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf, seguimiento_sabaticos_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, solicitudes_comisiones_estudio_mf, solicitudes_sabaticos_mf, usuario_rol_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /datos_identificacion is called by 22 micro frontends: acta_inicio_mf, core_mf_cliente, gestion_contractual_mf, plan_docente_mf, planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf, seguimiento_sabaticos_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, solicitudes_comisiones_estudio_mf, solicitudes_sabaticos_mf, usuario_rol_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "acta_inicio_mf",
       "core_mf_cliente",
@@ -15120,9 +15120,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /dependencia é chamada por 9 micro frontends: espacios_fisicos_dependencias_mf, gestion_registro_dependencias_mf, mapeo_dependencias_mf, plan_anual_auditoria_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, sga_cliente_admisiones_mf, sga_cliente_paz_y_salvos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /dependencia is called by 9 micro frontends: espacios_fisicos_dependencias_mf, gestion_registro_dependencias_mf, mapeo_dependencias_mf, plan_anual_auditoria_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, sga_cliente_admisiones_mf, sga_cliente_paz_y_salvos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "espacios_fisicos_dependencias_mf",
       "gestion_registro_dependencias_mf",
@@ -15603,9 +15603,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /dependencia/{param} é chamada por 4 micro frontends: gestion_registro_dependencias_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_paz_y_salvos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /dependencia/{param} is called by 4 micro frontends: gestion_registro_dependencias_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_paz_y_salvos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_registro_dependencias_mf",
       "sga_cliente_admisiones_mf",
@@ -15735,9 +15735,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /dependencia_padre/FacultadesConProyectos é chamada por 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /dependencia_padre/FacultadesConProyectos is called by 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -15856,9 +15856,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /dependencia_tipo_dependencia é chamada por 9 micro frontends: planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf, sga_cliente_admisiones_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_proyecto_curricular_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /dependencia_tipo_dependencia is called by 9 micro frontends: planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf, sga_cliente_admisiones_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_proyecto_curricular_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_construccion_mf",
       "planeacion_evaluacion_mf",
@@ -16298,9 +16298,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /derechos-pecuniarios/vigencias/{param} é chamada por 2 micro frontends: sga_cliente_administracion_mf, sga_cliente_derechos_pecuniarios_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /derechos-pecuniarios/vigencias/{param} is called by 2 micro frontends: sga_cliente_administracion_mf, sga_cliente_derechos_pecuniarios_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_derechos_pecuniarios_mf"
@@ -16391,9 +16391,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /descuentos_dependencia é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /descuentos_dependencia is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -16481,9 +16481,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /detalle_evaluacion é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /detalle_evaluacion is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -16575,9 +16575,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /document é chamada por 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /document is called by 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "seguimiento_sabaticos_mf",
       "solicitudes_sabaticos_mf"
@@ -16653,9 +16653,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /document/firma_electronica é chamada por 12 micro frontends: plan_docente_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /document/firma_electronica is called by 12 micro frontends: plan_docente_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "sga_cliente_admisiones_mf",
@@ -17321,9 +17321,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /document/upload é chamada por 4 micro frontends: gestion_contractual_mf, planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /document/upload is called by 4 micro frontends: gestion_contractual_mf, planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_contractual_mf",
       "planeacion_construccion_mf",
@@ -17458,9 +17458,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /document/uploadAnyFormat é chamada por 15 micro frontends: ejecucion_auditoria_mf, gestion_contractual_mf, plan_anual_auditoria_mf, plan_docente_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /document/uploadAnyFormat is called by 15 micro frontends: ejecucion_auditoria_mf, gestion_contractual_mf, plan_anual_auditoria_mf, plan_docente_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "ejecucion_auditoria_mf",
       "gestion_contractual_mf",
@@ -18474,9 +18474,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /document/{param} é chamada por 19 micro frontends: ejecucion_auditoria_mf, gestion_contractual_mf, plan_anual_auditoria_mf, plan_docente_mf, planeacion_evaluacion_mf, planeacion_macroplanes_mf, planeacion_seguimiento_mf, revision_cumplidos_proveedores_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /document/{param} is called by 19 micro frontends: ejecucion_auditoria_mf, gestion_contractual_mf, plan_anual_auditoria_mf, plan_docente_mf, planeacion_evaluacion_mf, planeacion_macroplanes_mf, planeacion_seguimiento_mf, revision_cumplidos_proveedores_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "ejecucion_auditoria_mf",
       "gestion_contractual_mf",
@@ -20187,9 +20187,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /documento é chamada por 14 micro frontends: ejecucion_auditoria_mf, plan_anual_auditoria_mf, plan_docente_mf, revision_cumplidos_proveedores_mf, sga_cliente_admisiones_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /documento is called by 14 micro frontends: ejecucion_auditoria_mf, plan_anual_auditoria_mf, plan_docente_mf, revision_cumplidos_proveedores_mf, sga_cliente_admisiones_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "ejecucion_auditoria_mf",
       "plan_anual_auditoria_mf",
@@ -21216,9 +21216,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /documento/{param} é chamada por 16 micro frontends: ejecucion_auditoria_mf, plan_anual_auditoria_mf, plan_docente_mf, planeacion_evaluacion_mf, planeacion_seguimiento_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /documento/{param} is called by 16 micro frontends: ejecucion_auditoria_mf, plan_anual_auditoria_mf, plan_docente_mf, planeacion_evaluacion_mf, planeacion_seguimiento_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "ejecucion_auditoria_mf",
       "plan_anual_auditoria_mf",
@@ -22530,9 +22530,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /documento_programa é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /documento_programa is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -22645,9 +22645,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /document{param} é chamada por 12 micro frontends: plan_docente_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /document{param} is called by 12 micro frontends: plan_docente_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf, sga_cliente_proyecto_curricular_mf, tirilla_noticias_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "sga_cliente_admisiones_mf",
@@ -23318,9 +23318,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /email/enviar_templated_email é chamada por 3 micro frontends: plan_anual_auditoria_mf, sga_cliente_admisiones_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /email/enviar_templated_email is called by 3 micro frontends: plan_anual_auditoria_mf, sga_cliente_admisiones_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_anual_auditoria_mf",
       "sga_cliente_admisiones_mf",
@@ -23444,9 +23444,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /enfasis/{param} é chamada por 3 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf, sga_cliente_proyecto_curricular_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /enfasis/{param} is called by 3 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf, sga_cliente_proyecto_curricular_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf",
@@ -23551,9 +23551,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /espacio-academico é chamada por 4 micro frontends: plan_docente_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /espacio-academico is called by 4 micro frontends: plan_docente_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "sga_cliente_espacios_academicos_mf",
@@ -23719,9 +23719,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /espacio-academico/{param} é chamada por 4 micro frontends: plan_docente_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /espacio-academico/{param} is called by 4 micro frontends: plan_docente_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "sga_cliente_espacios_academicos_mf",
@@ -23887,9 +23887,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /espacio-fisico/dependencia é chamada por 2 micro frontends: plan_docente_mf, sga_cliente_gestion_horarios_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /espacio-fisico/dependencia is called by 2 micro frontends: plan_docente_mf, sga_cliente_gestion_horarios_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "sga_cliente_gestion_horarios_mf"
@@ -23970,9 +23970,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /estado-plan é chamada por 2 micro frontends: planeacion_reportes_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /estado-plan is called by 2 micro frontends: planeacion_reportes_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_reportes_mf",
       "planeacion_seguimiento_mf"
@@ -24053,9 +24053,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /estado_inscripcion é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /estado_inscripcion is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -24141,9 +24141,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /experiencia-laboral/tercero é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /experiencia-laboral/tercero is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -24229,9 +24229,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /firma_electronica é chamada por 2 micro frontends: plan_docente_mf, revision_cumplidos_proveedores_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /firma_electronica is called by 2 micro frontends: plan_docente_mf, revision_cumplidos_proveedores_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "revision_cumplidos_proveedores_mf"
@@ -24307,9 +24307,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /formulacion/plan/versiones/{param}/{param}/{param} é chamada por 2 micro frontends: planeacion_formulacion_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /formulacion/plan/versiones/{param}/{param}/{param} is called by 2 micro frontends: planeacion_formulacion_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_formulacion_mf",
       "planeacion_seguimiento_mf"
@@ -24385,9 +24385,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /formulacion/planes_formulacion é chamada por 2 micro frontends: planeacion_formulacion_mf, planeacion_pendientes_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /formulacion/planes_formulacion is called by 2 micro frontends: planeacion_formulacion_mf, planeacion_pendientes_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_formulacion_mf",
       "planeacion_pendientes_mf"
@@ -24463,9 +24463,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /formulacion/tercero/{param} é chamada por 6 micro frontends: planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /formulacion/tercero/{param} is called by 6 micro frontends: planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_construccion_mf",
       "planeacion_evaluacion_mf",
@@ -24701,9 +24701,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /formulacion/unidades é chamada por 5 micro frontends: planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /formulacion/unidades is called by 5 micro frontends: planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_construccion_mf",
       "planeacion_formulacion_mf",
@@ -24887,9 +24887,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /gestion_dependencias_mid/BuscarDependencia é chamada por 2 micro frontends: gestion_registro_dependencias_mf, mapeo_dependencias_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /gestion_dependencias_mid/BuscarDependencia is called by 2 micro frontends: gestion_registro_dependencias_mf, mapeo_dependencias_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_registro_dependencias_mf",
       "mapeo_dependencias_mf"
@@ -24965,9 +24965,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /historial_estado_sabatico é chamada por 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /historial_estado_sabatico is called by 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "seguimiento_sabaticos_mf",
       "solicitudes_sabaticos_mf"
@@ -25048,9 +25048,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /info_complementaria é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /info_complementaria is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -25196,9 +25196,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /info_complementaria_tercero é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_datos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /info_complementaria_tercero is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_datos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_datos_mf"
@@ -25285,9 +25285,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /inscripcion é chamada por 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /inscripcion is called by 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -25503,9 +25503,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /inscripcion/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /inscripcion/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -25621,9 +25621,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /inscripcion_pregrado é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /inscripcion_pregrado is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -25731,9 +25731,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /inscripciones/actualizar-inscripcion é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /inscripciones/actualizar-inscripcion is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -25844,9 +25844,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /inscripciones/informacion-complementaria/tercero/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /inscripciones/informacion-complementaria/tercero/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -25942,9 +25942,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /item é chamada por 2 micro frontends: revision_cumplidos_proveedores_mf, sga_cliente_evaluacion_docente_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /item is called by 2 micro frontends: revision_cumplidos_proveedores_mf, sga_cliente_evaluacion_docente_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "revision_cumplidos_proveedores_mf",
       "sga_cliente_evaluacion_docente_mf"
@@ -26030,9 +26030,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /legalizacion/informacion-legalizacion/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /legalizacion/informacion-legalizacion/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -26118,9 +26118,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /liquidacion é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /liquidacion is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -26212,9 +26212,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /lugar é chamada por 2 micro frontends: gestion_contractual_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /lugar is called by 2 micro frontends: gestion_contractual_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_contractual_mf",
       "sga_cliente_inscripcion_mf"
@@ -26310,9 +26310,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /metodologia é chamada por 2 micro frontends: sga_cliente_inscripcion_mf, sga_cliente_proyecto_curricular_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /metodologia is called by 2 micro frontends: sga_cliente_inscripcion_mf, sga_cliente_proyecto_curricular_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_inscripcion_mf",
       "sga_cliente_proyecto_curricular_mf"
@@ -26393,9 +26393,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /nivel_formacion é chamada por 9 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_proyecto_curricular_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /nivel_formacion is called by 9 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_proyecto_curricular_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -26925,9 +26925,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /notificacion é chamada por 5 micro frontends: plan_anual_auditoria_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, revision_cumplidos_proveedores_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /notificacion is called by 5 micro frontends: plan_anual_auditoria_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, revision_cumplidos_proveedores_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_anual_auditoria_mf",
       "planeacion_formulacion_mf",
@@ -27096,9 +27096,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /parametro é chamada por 18 micro frontends: ejecucion_auditoria_mf, gestion_contractual_mf, plan_anual_auditoria_mf, plan_docente_mf, planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, poliza_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_proyecto_curricular_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /parametro is called by 18 micro frontends: ejecucion_auditoria_mf, gestion_contractual_mf, plan_anual_auditoria_mf, plan_docente_mf, planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, poliza_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_proyecto_curricular_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "ejecucion_auditoria_mf",
       "gestion_contractual_mf",
@@ -28834,9 +28834,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /parametro/{param} é chamada por 4 micro frontends: gestion_contractual_mf, planeacion_construccion_mf, planeacion_seguimiento_mf, sga_cliente_admisiones_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /parametro/{param} is called by 4 micro frontends: gestion_contractual_mf, planeacion_construccion_mf, planeacion_seguimiento_mf, sga_cliente_admisiones_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_contractual_mf",
       "planeacion_construccion_mf",
@@ -28983,9 +28983,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /parametro_periodo é chamada por 7 micro frontends: planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_seguimiento_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /parametro_periodo is called by 7 micro frontends: planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_seguimiento_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_construccion_mf",
       "planeacion_formulacion_mf",
@@ -29318,9 +29318,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /perfil_x_menu_opcion é chamada por 3 micro frontends: plan_docente_mf, seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /perfil_x_menu_opcion is called by 3 micro frontends: plan_docente_mf, seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "seguimiento_sabaticos_mf",
@@ -29429,9 +29429,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /periodo é chamada por 19 micro frontends: formularios_dinamicos_mf, plan_docente_mf, planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_gestion_periodo_mf, sga_cliente_inscripcion_mf, sga_cliente_preinscripciones_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /periodo is called by 19 micro frontends: formularios_dinamicos_mf, plan_docente_mf, planeacion_construccion_mf, planeacion_evaluacion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_gestion_periodo_mf, sga_cliente_inscripcion_mf, sga_cliente_preinscripciones_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "formularios_dinamicos_mf",
       "plan_docente_mf",
@@ -31308,9 +31308,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /periodo/{param} é chamada por 5 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_gestion_periodo_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /periodo/{param} is called by 5 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_gestion_periodo_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -31519,9 +31519,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /periodos/{param} é chamada por 2 micro frontends: planeacion_construccion_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /periodos/{param} is called by 2 micro frontends: planeacion_construccion_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_construccion_mf",
       "planeacion_seguimiento_mf"
@@ -31597,9 +31597,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /personas/{param} é chamada por 4 micro frontends: sga_cliente_admisiones_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /personas/{param} is called by 4 micro frontends: sga_cliente_admisiones_mf, sga_cliente_datos_mf, sga_cliente_derechos_pecuniarios_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_datos_mf",
@@ -31804,9 +31804,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /personas/{param}/complementarios é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /personas/{param}/complementarios is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -31902,9 +31902,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /plan é chamada por 7 micro frontends: plan_docente_mf, planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /plan is called by 7 micro frontends: plan_docente_mf, planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf, planeacion_pendientes_mf, planeacion_reportes_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "planeacion_construccion_mf",
@@ -32302,9 +32302,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /plan/{param} é chamada por 6 micro frontends: plan_docente_mf, planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /plan/{param} is called by 6 micro frontends: plan_docente_mf, planeacion_construccion_mf, planeacion_formulacion_mf, planeacion_macroplanes_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "planeacion_construccion_mf",
@@ -32596,9 +32596,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /plan_estudio é chamada por 4 micro frontends: sga_cliente_admisiones_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_plan_estudios_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /plan_estudio is called by 4 micro frontends: sga_cliente_admisiones_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_plan_estudios_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_evaluacion_docente_mf",
@@ -32729,9 +32729,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /plantilla é chamada por 4 micro frontends: planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, sga_cliente_evaluacion_docente_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /plantilla is called by 4 micro frontends: planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, sga_cliente_evaluacion_docente_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_formulacion_mf",
       "planeacion_pendientes_mf",
@@ -32876,9 +32876,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /polizas é chamada por 2 micro frontends: gestion_contractual_mf, poliza_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /polizas is called by 2 micro frontends: gestion_contractual_mf, poliza_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_contractual_mf",
       "poliza_mf"
@@ -32954,9 +32954,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /propuesta é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /propuesta is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -33064,9 +33064,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /proyecto_academico_institucion é chamada por 7 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /proyecto_academico_institucion is called by 7 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_espacios_academicos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -33517,9 +33517,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /proyecto_academico_institucion/{param} é chamada por 3 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /proyecto_academico_institucion/{param} is called by 3 micro frontends: sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_calendario_academico_mf",
@@ -33628,9 +33628,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /recibos/comprobante-inscripcion é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /recibos/comprobante-inscripcion is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -33706,9 +33706,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /recibos/estudiantes é chamada por 2 micro frontends: sga_cliente_derechos_pecuniarios_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /recibos/estudiantes is called by 2 micro frontends: sga_cliente_derechos_pecuniarios_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_derechos_pecuniarios_mf",
       "sga_cliente_inscripcion_mf"
@@ -33789,9 +33789,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /recibov2 é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /recibov2 is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -33872,9 +33872,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /relacion_lugares é chamada por 2 micro frontends: gestion_contractual_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /relacion_lugares is called by 2 micro frontends: gestion_contractual_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_contractual_mf",
       "sga_cliente_inscripcion_mf"
@@ -33995,9 +33995,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /requisito_programa_academico é chamada por 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /requisito_programa_academico is called by 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -34153,9 +34153,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /research_units/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /research_units/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -34241,9 +34241,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /rol/periods é chamada por 2 micro frontends: plan_anual_auditoria_mf, usuario_rol_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /rol/periods is called by 2 micro frontends: plan_anual_auditoria_mf, usuario_rol_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_anual_auditoria_mf",
       "usuario_rol_mf"
@@ -34329,9 +34329,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /sabatico é chamada por 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /sabatico is called by 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "seguimiento_sabaticos_mf",
       "solicitudes_sabaticos_mf"
@@ -34413,9 +34413,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /sabatico/plan_trabajo/estado é chamada por 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /sabatico/plan_trabajo/estado is called by 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "seguimiento_sabaticos_mf",
       "solicitudes_sabaticos_mf"
@@ -34516,9 +34516,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /secretario_dependencia/{param} é chamada por 2 micro frontends: solicitudes_comisiones_estudio_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /secretario_dependencia/{param} is called by 2 micro frontends: solicitudes_comisiones_estudio_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "solicitudes_comisiones_estudio_mf",
       "solicitudes_sabaticos_mf"
@@ -34594,9 +34594,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /seguimiento é chamada por 2 micro frontends: planeacion_construccion_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /seguimiento is called by 2 micro frontends: planeacion_construccion_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_construccion_mf",
       "planeacion_seguimiento_mf"
@@ -34682,9 +34682,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /sistema é chamada por 3 micro frontends: planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /sistema is called by 3 micro frontends: planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_formulacion_mf",
       "planeacion_pendientes_mf",
@@ -34783,9 +34783,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /solicitud é chamada por 4 micro frontends: seguimiento_sabaticos_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /solicitud is called by 4 micro frontends: seguimiento_sabaticos_mf, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "seguimiento_sabaticos_mf",
       "sga_cliente_administracion_mf",
@@ -34932,9 +34932,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /soporte_documento_programa é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /soporte_documento_programa is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -35052,9 +35052,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /soporte_solicitud é chamada por 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /soporte_solicitud is called by 2 micro frontends: seguimiento_sabaticos_mf, solicitudes_sabaticos_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "seguimiento_sabaticos_mf",
       "solicitudes_sabaticos_mf"
@@ -35167,9 +35167,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /subtypes/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /subtypes/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -35255,9 +35255,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tags_por_dependencia é chamada por 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tags_por_dependencia is called by 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -35361,9 +35361,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tercero é chamada por 10 micro frontends: core_mf_cliente, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tercero is called by 10 micro frontends: core_mf_cliente, sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_calendario_academico_mf, sga_cliente_datos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf, sga_cliente_plan_estudios_mf, sga_cliente_practicas_academicas_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "core_mf_cliente",
       "sga_cliente_administracion_mf",
@@ -35869,9 +35869,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tercero/identificacion é chamada por 2 micro frontends: plan_anual_auditoria_mf, usuario_rol_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tercero/identificacion is called by 2 micro frontends: plan_anual_auditoria_mf, usuario_rol_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_anual_auditoria_mf",
       "usuario_rol_mf"
@@ -35952,9 +35952,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tercero/{param} é chamada por 9 micro frontends: acta_inicio_mf, gestion_contractual_mf, plan_anual_auditoria_mf, plan_docente_mf, seguimiento_sabaticos_mf, sga_cliente_datos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_plan_estudios_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tercero/{param} is called by 9 micro frontends: acta_inicio_mf, gestion_contractual_mf, plan_anual_auditoria_mf, plan_docente_mf, seguimiento_sabaticos_mf, sga_cliente_datos_mf, sga_cliente_evaluacion_docente_mf, sga_cliente_gestion_horarios_mf, sga_cliente_plan_estudios_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "acta_inicio_mf",
       "gestion_contractual_mf",
@@ -36389,9 +36389,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /time_bog é chamada por 3 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /time_bog is called by 3 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf, sga_cliente_notas_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf",
@@ -36500,9 +36500,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tipo-plan é chamada por 2 micro frontends: planeacion_construccion_mf, planeacion_macroplanes_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tipo-plan is called by 2 micro frontends: planeacion_construccion_mf, planeacion_macroplanes_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_construccion_mf",
       "planeacion_macroplanes_mf"
@@ -36588,9 +36588,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tipo_dependencia é chamada por 2 micro frontends: gestion_registro_dependencias_mf, mapeo_dependencias_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tipo_dependencia is called by 2 micro frontends: gestion_registro_dependencias_mf, mapeo_dependencias_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "gestion_registro_dependencias_mf",
       "mapeo_dependencias_mf"
@@ -36676,9 +36676,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tipo_documento é chamada por 4 micro frontends: plan_docente_mf, revision_cumplidos_proveedores_mf, sga_cliente_datos_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tipo_documento is called by 4 micro frontends: plan_docente_mf, revision_cumplidos_proveedores_mf, sga_cliente_datos_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_docente_mf",
       "revision_cumplidos_proveedores_mf",
@@ -36833,9 +36833,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tipo_documento/{param} é chamada por 4 micro frontends: acta_inicio_mf, gestion_contractual_mf, sga_cliente_admisiones_mf, sga_cliente_evaluacion_docente_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tipo_documento/{param} is called by 4 micro frontends: acta_inicio_mf, gestion_contractual_mf, sga_cliente_admisiones_mf, sga_cliente_evaluacion_docente_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "acta_inicio_mf",
       "gestion_contractual_mf",
@@ -36965,9 +36965,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tipo_inscripcion é chamada por 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tipo_inscripcion is called by 3 micro frontends: sga_cliente_administracion_mf, sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_administracion_mf",
       "sga_cliente_admisiones_mf",
@@ -37128,9 +37128,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /tipo_notificacion é chamada por 3 micro frontends: planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /tipo_notificacion is called by 3 micro frontends: planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "planeacion_formulacion_mf",
       "planeacion_pendientes_mf",
@@ -37229,9 +37229,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /transferencia é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /transferencia is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -37307,9 +37307,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /transferencia/actualizar-estado/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /transferencia/actualizar-estado/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -37385,9 +37385,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /transferencia/consultar-parametros é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /transferencia/consultar-parametros is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -37463,9 +37463,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /transferencia/consultar-periodo é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /transferencia/consultar-periodo is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -37541,9 +37541,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /transferencia/estados é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /transferencia/estados is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -37619,9 +37619,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /transferencia/inscripcion/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /transferencia/inscripcion/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -37697,9 +37697,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /transferencia/respuesta-solicitud/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /transferencia/respuesta-solicitud/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -37775,9 +37775,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /transferencia/{param} é chamada por 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /transferencia/{param} is called by 2 micro frontends: sga_cliente_admisiones_mf, sga_cliente_inscripcion_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "sga_cliente_admisiones_mf",
       "sga_cliente_inscripcion_mf"
@@ -37853,9 +37853,9 @@
   },
   {
     "anti_pattern": "hammering-apis",
-    "message": "A rota /vinculacion é chamada por 5 micro frontends: plan_anual_auditoria_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, sga_cliente_proyecto_curricular_mf",
-    "dimension": "backend compartilhado",
-    "explanation": "A mesma rota é consumida por mais de um micro frontend. Uma mudança no contrato do serviço afeta todos eles ao mesmo tempo, sem que nenhum dependa diretamente do outro.",
+    "message": "The route /vinculacion is called by 5 micro frontends: plan_anual_auditoria_mf, planeacion_formulacion_mf, planeacion_pendientes_mf, planeacion_seguimiento_mf, sga_cliente_proyecto_curricular_mf",
+    "dimension": "shared backend",
+    "explanation": "The same route is consumed by more than one micro frontend. A change in the service contract affects all of them at once, although none depends directly on the other.",
     "subjects": [
       "plan_anual_auditoria_mf",
       "planeacion_formulacion_mf",
@@ -38039,9 +38039,9 @@
   },
   {
     "anti_pattern": "mega-frontend",
-    "message": "plan_anual_auditoria_mf tem 30 telas e 25683 linhas, acima das cercas de 11.625 telas e 12759.5 linhas.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend grande e coeso não é Mega Frontend. O corte é a cerca superior de Tukey sobre a distribuição do próprio sistema, exigida nas duas medidas ao mesmo tempo.",
+    "message": "plan_anual_auditoria_mf has 30 screens and 25683 lines, above the fences of 11.625 screens and 12759.5 lines.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a large, cohesive micro frontend is not a Mega Frontend. The cut-off is Tukey's upper fence over the system's own distribution, required on both measures at once.",
     "subjects": [
       "plan_anual_auditoria_mf"
     ],
@@ -38097,22 +38097,22 @@
           }
         ]
       },
-      "criterio": "outlier superior",
-      "telas": 30,
-      "fragmentos": 0,
-      "linhas": 25683,
-      "cerca_telas": 11.625,
-      "cerca_linhas": 12759.5,
-      "mediana_telas": 4.0,
-      "mediana_linhas": 3141.0
+      "criterion": "upper outlier",
+      "screens": 30,
+      "fragments": 0,
+      "lines": 25683,
+      "fence_screens": 11.625,
+      "fence_lines": 12759.5,
+      "median_screens": 4.0,
+      "median_lines": 3141.0
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Mega%20Frontend"
   },
   {
     "anti_pattern": "mega-frontend",
-    "message": "sga_cliente_admisiones_mf tem 31 telas e 24429 linhas, acima das cercas de 11.625 telas e 12759.5 linhas.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend grande e coeso não é Mega Frontend. O corte é a cerca superior de Tukey sobre a distribuição do próprio sistema, exigida nas duas medidas ao mesmo tempo.",
+    "message": "sga_cliente_admisiones_mf has 31 screens and 24429 lines, above the fences of 11.625 screens and 12759.5 lines.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a large, cohesive micro frontend is not a Mega Frontend. The cut-off is Tukey's upper fence over the system's own distribution, required on both measures at once.",
     "subjects": [
       "sga_cliente_admisiones_mf"
     ],
@@ -38168,22 +38168,22 @@
           }
         ]
       },
-      "criterio": "outlier superior",
-      "telas": 31,
-      "fragmentos": 0,
-      "linhas": 24429,
-      "cerca_telas": 11.625,
-      "cerca_linhas": 12759.5,
-      "mediana_telas": 4.0,
-      "mediana_linhas": 3141.0
+      "criterion": "upper outlier",
+      "screens": 31,
+      "fragments": 0,
+      "lines": 24429,
+      "fence_screens": 11.625,
+      "fence_lines": 12759.5,
+      "median_screens": 4.0,
+      "median_lines": 3141.0
     },
     "reference": "https://mfe-anti-patterns.online/micro-frontends-anti-patterns/#/details/Mega%20Frontend"
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "acta_inicio_mf tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 775 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "acta_inicio_mf has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 775 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "acta_inicio_mf"
     ],
@@ -38268,15 +38268,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 775,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 775,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -38285,9 +38285,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "auditoria_mf tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 1570 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "auditoria_mf has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 1570 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "auditoria_mf"
     ],
@@ -38372,15 +38372,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 1570,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 1570,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -38389,9 +38389,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "diplomas_mf tem 3 telas e 0 fragmentos, somando 3, no máximo 5 (piso absoluto), com 927 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "diplomas_mf has 3 screens and 0 fragments, 3 in total, at most 5 (absolute floor), with 927 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "diplomas_mf"
     ],
@@ -38476,15 +38476,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 3,
-      "fragmentos": 0,
-      "linhas": 927,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 3,
+      "fragments": 0,
+      "lines": 927,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -38493,9 +38493,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "ejecucion_auditoria_mf tem 5 telas e 0 fragmentos, somando 5, no máximo 5 (piso absoluto), com 2156 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "ejecucion_auditoria_mf has 5 screens and 0 fragments, 5 in total, at most 5 (absolute floor), with 2156 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "ejecucion_auditoria_mf"
     ],
@@ -38580,15 +38580,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 5,
-      "fragmentos": 0,
-      "linhas": 2156,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 5,
+      "fragments": 0,
+      "lines": 2156,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -38597,9 +38597,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "espacios_fisicos_dependencias_mf tem 4 telas e 0 fragmentos, somando 4, no máximo 5 (piso absoluto), com 1921 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "espacios_fisicos_dependencias_mf has 4 screens and 0 fragments, 4 in total, at most 5 (absolute floor), with 1921 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "espacios_fisicos_dependencias_mf"
     ],
@@ -38684,15 +38684,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 4,
-      "fragmentos": 0,
-      "linhas": 1921,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 4,
+      "fragments": 0,
+      "lines": 1921,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -38701,9 +38701,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "gestion_personas_mf tem 2 telas e 0 fragmentos, somando 2, no máximo 5 (piso absoluto), com 1511 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "gestion_personas_mf has 2 screens and 0 fragments, 2 in total, at most 5 (absolute floor), with 1511 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "gestion_personas_mf"
     ],
@@ -38788,15 +38788,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 2,
-      "fragmentos": 0,
-      "linhas": 1511,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 2,
+      "fragments": 0,
+      "lines": 1511,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -38805,9 +38805,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "gestion_registro_dependencias_mf tem 2 telas e 0 fragmentos, somando 2, no máximo 5 (piso absoluto), com 1342 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "gestion_registro_dependencias_mf has 2 screens and 0 fragments, 2 in total, at most 5 (absolute floor), with 1342 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "gestion_registro_dependencias_mf"
     ],
@@ -38892,15 +38892,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 2,
-      "fragmentos": 0,
-      "linhas": 1342,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 2,
+      "fragments": 0,
+      "lines": 1342,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -38909,9 +38909,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "mapeo_dependencias_mf tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 1103 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "mapeo_dependencias_mf has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 1103 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "mapeo_dependencias_mf"
     ],
@@ -38996,15 +38996,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 1103,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 1103,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39013,9 +39013,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "planeacion_evaluacion_mf tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 1834 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "planeacion_evaluacion_mf has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 1834 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "planeacion_evaluacion_mf"
     ],
@@ -39100,15 +39100,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 1834,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 1834,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39117,9 +39117,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "planeacion_pendientes_mf tem 2 telas e 0 fragmentos, somando 2, no máximo 5 (piso absoluto), com 1693 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "planeacion_pendientes_mf has 2 screens and 0 fragments, 2 in total, at most 5 (absolute floor), with 1693 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "planeacion_pendientes_mf"
     ],
@@ -39204,15 +39204,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 2,
-      "fragmentos": 0,
-      "linhas": 1693,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 2,
+      "fragments": 0,
+      "lines": 1693,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39221,9 +39221,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "planeacion_reportes_mf tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 1319 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "planeacion_reportes_mf has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 1319 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "planeacion_reportes_mf"
     ],
@@ -39308,15 +39308,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 1319,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 1319,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39325,9 +39325,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "planeacion_utilidades_mf tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 123 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "planeacion_utilidades_mf has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 123 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "planeacion_utilidades_mf"
     ],
@@ -39412,15 +39412,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 123,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 123,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39429,9 +39429,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "poliza_mf tem 2 telas e 0 fragmentos, somando 2, no máximo 5 (piso absoluto), com 1001 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "poliza_mf has 2 screens and 0 fragments, 2 in total, at most 5 (absolute floor), with 1001 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "poliza_mf"
     ],
@@ -39516,15 +39516,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 2,
-      "fragmentos": 0,
-      "linhas": 1001,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 2,
+      "fragments": 0,
+      "lines": 1001,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39533,9 +39533,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "reportes_mf tem 4 telas e 0 fragmentos, somando 4, no máximo 5 (piso absoluto), com 553 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "reportes_mf has 4 screens and 0 fragments, 4 in total, at most 5 (absolute floor), with 553 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "reportes_mf"
     ],
@@ -39620,15 +39620,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 4,
-      "fragmentos": 0,
-      "linhas": 553,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 4,
+      "fragments": 0,
+      "lines": 553,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39637,9 +39637,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "seguimiento_sabaticos_mf tem 3 telas e 0 fragmentos, somando 3, no máximo 5 (piso absoluto), com 3078 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "seguimiento_sabaticos_mf has 3 screens and 0 fragments, 3 in total, at most 5 (absolute floor), with 3078 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "seguimiento_sabaticos_mf"
     ],
@@ -39724,15 +39724,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 3,
-      "fragmentos": 0,
-      "linhas": 3078,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 3,
+      "fragments": 0,
+      "lines": 3078,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39741,9 +39741,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "sga_cliente_espacios_academicos_mf tem 4 telas e 0 fragmentos, somando 4, no máximo 5 (piso absoluto), com 2753 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "sga_cliente_espacios_academicos_mf has 4 screens and 0 fragments, 4 in total, at most 5 (absolute floor), with 2753 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "sga_cliente_espacios_academicos_mf"
     ],
@@ -39828,15 +39828,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 4,
-      "fragmentos": 0,
-      "linhas": 2753,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 4,
+      "fragments": 0,
+      "lines": 2753,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39845,9 +39845,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "sga_cliente_gestion_periodo_mf tem 4 telas e 0 fragmentos, somando 4, no máximo 5 (piso absoluto), com 1306 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "sga_cliente_gestion_periodo_mf has 4 screens and 0 fragments, 4 in total, at most 5 (absolute floor), with 1306 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "sga_cliente_gestion_periodo_mf"
     ],
@@ -39932,15 +39932,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 4,
-      "fragmentos": 0,
-      "linhas": 1306,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 4,
+      "fragments": 0,
+      "lines": 1306,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -39949,9 +39949,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "sga_cliente_paz_y_salvos_mf tem 1 telas e 0 fragmentos, somando 1, no máximo 5 (piso absoluto), com 2132 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "sga_cliente_paz_y_salvos_mf has 1 screens and 0 fragments, 1 in total, at most 5 (absolute floor), with 2132 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "sga_cliente_paz_y_salvos_mf"
     ],
@@ -40036,15 +40036,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 1,
-      "fragmentos": 0,
-      "linhas": 2132,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 1,
+      "fragments": 0,
+      "lines": 2132,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -40053,9 +40053,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "sga_cliente_preinscripciones_mf tem 3 telas e 0 fragmentos, somando 3, no máximo 5 (piso absoluto), com 605 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "sga_cliente_preinscripciones_mf has 3 screens and 0 fragments, 3 in total, at most 5 (absolute floor), with 605 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "sga_cliente_preinscripciones_mf"
     ],
@@ -40140,15 +40140,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 3,
-      "fragmentos": 0,
-      "linhas": 605,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 3,
+      "fragments": 0,
+      "lines": 605,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
@@ -40157,9 +40157,9 @@
   },
   {
     "anti_pattern": "nano-frontend",
-    "message": "usuario_rol_mf tem 3 telas e 0 fragmentos, somando 3, no máximo 5 (piso absoluto), com 1739 linhas de código, abaixo da mediana de 3141.",
-    "dimension": "tamanho",
-    "explanation": "Indício, não prova: um micro frontend pequeno é legítimo quando constitui sozinho uma capacidade inteira. O corte relativo é a cerca inferior de Tukey sobre a distribuição do próprio sistema, que não acusa ninguém quando as unidades são homogêneas; e a unidade precisa ter também menos código que a mediana, porque poucas telas com muito código não é unidade pequena.",
+    "message": "usuario_rol_mf has 3 screens and 0 fragments, 3 in total, at most 5 (absolute floor), with 1739 lines of code, below the median of 3141.",
+    "dimension": "size",
+    "explanation": "A hint, not proof: a small micro frontend is legitimate when it makes up a whole capability on its own. The relative cut-off is Tukey's lower fence over the system's own distribution, which flags no one when the units are homogeneous; and the unit must also have less code than the median, because few screens with a lot of code is not a small unit.",
     "subjects": [
       "usuario_rol_mf"
     ],
@@ -40244,15 +40244,15 @@
           }
         ]
       },
-      "criterio": "piso absoluto",
-      "limiar": 5.0,
-      "telas": 3,
-      "fragmentos": 0,
-      "linhas": 1739,
-      "piso": 5,
-      "mediana_telas": 4.0,
-      "mediana_fragmentos": 0.0,
-      "mediana_linhas": 3141.0,
+      "criterion": "absolute floor",
+      "threshold": 5.0,
+      "screens": 3,
+      "fragments": 0,
+      "lines": 1739,
+      "floor": 5,
+      "median_screens": 4.0,
+      "median_fragments": 0.0,
+      "median_lines": 3141.0,
       "q1": 3.0,
       "q3": 6.0,
       "iqr": 3.0
